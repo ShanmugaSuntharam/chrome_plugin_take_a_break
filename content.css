@@ -1,0 +1,114 @@
+/* Additional content script styles for Take a Break Reminder extension */
+
+/* Ensure our overlay has the highest z-index */
+#take-a-break-overlay {
+    z-index: 2147483647 !important;
+}
+
+/* Override any conflicting styles from websites */
+#take-a-break-overlay * {
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+/* Ensure buttons are clickable */
+#take-a-break-overlay button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Prevent text selection on our overlay */
+#take-a-break-overlay {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Ensure our modal is always visible */
+.break-modal {
+    position: relative !important;
+    z-index: 2147483647 !important;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+    .break-modal {
+        width: 95% !important;
+        margin: 10px !important;
+    }
+    
+    .break-header {
+        padding: 15px !important;
+    }
+    
+    .break-header h2 {
+        font-size: 24px !important;
+    }
+    
+    .break-content {
+        padding: 20px !important;
+    }
+    
+    .timer-circle {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .timer-text {
+        font-size: 20px !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .break-modal {
+        border: 3px solid #000 !important;
+    }
+    
+    .break-header {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    
+    .btn-primary {
+        background: #000 !important;
+        color: #fff !important;
+        border: 2px solid #000 !important;
+    }
+    
+    .btn-secondary {
+        background: #333 !important;
+        color: #fff !important;
+        border: 2px solid #333 !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .break-modal {
+        background: #1a1a1a !important;
+        color: #fff !important;
+    }
+    
+    .break-suggestions h3 {
+        color: #fff !important;
+    }
+    
+    .break-suggestions li {
+        color: #ccc !important;
+        border-bottom-color: #333 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #take-a-break-overlay,
+    .break-modal {
+        animation: none !important;
+    }
+    
+    .btn:hover {
+        transform: none !important;
+    }
+}
