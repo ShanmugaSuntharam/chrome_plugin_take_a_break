@@ -1,3 +1,6 @@
+# Demo video from YouTube
+https://youtu.be/Dnp2obhcVNA?si=6BVmVRIy7BoYumgc 
+
 # Take a Break Reminder - Chrome Extension
 
 A simple yet powerful Chrome extension that reminds users to step away from their screens, stretch, hydrate, or rest their eyes—perfect for remote workers and desk warriors.
